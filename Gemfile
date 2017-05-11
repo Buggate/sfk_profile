@@ -1,9 +1,5 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -28,6 +24,14 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
 gem 'modernizr-rails', '~> 2.7', '>= 2.7.1'
+
+ group :production do
+   
+   gem 'pg', '~> 0.18.4'
+
+   gem 'rails_12factor', '~> 0.0.3'
+
+end
 
 
 
